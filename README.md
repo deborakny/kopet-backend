@@ -8,7 +8,7 @@
 <li>
 <h2>PostgreSQL e arquivo .env</h2>
 </p>
-  É necessário ter em seu postgreSQL um banco já criado com o mesmo nome que será utilizado aqui. Crie no seu backend um arquivo .env com a seguinte estrutura:
+  É necessário ter em seu postgreSQL um banco já criado com o mesmo nome que será utilizado aqui. Crie no seu backend (pasta raíz dele) um arquivo .env com a seguinte estrutura:
 </p>
 <br>
 <p>
@@ -34,7 +34,8 @@
 <li>
 <h2>Comandos do BackEnd / Inicialização</h2>
 <p>
-  Após baixa-lo, use o comando "npm i" no terminal de seu diretório. Ele irá baixar todos os componentes necessários da aplicação. Em seguida, utilize ou o comando "npm run start" ou o "nest start" para rodar a aplicação. Ele irá criar as tabelas necessárias no postgreSQL - a conexão com o Twilio e Mailgun somente é feita ao realizar um agendamento, caso não tenha comentado esse trecho.
+  É necessário ter o NodeJS instalado em sua máquina ou de maneira local ao projeto (https://nodejs.org).<br>
+  Após baixar o projeto, use o comando "npm i" no terminal de seu diretório. Ele irá baixar todos os componentes necessários da aplicação. Em seguida, utilize ou o comando "npm run start" ou o "nest start" para rodar a aplicação. Ele irá criar as tabelas necessárias no postgreSQL - a conexão com o Twilio e Mailgun somente é feita ao realizar um agendamento, caso não tenha comentado esse trecho.
   O próprio terminal lhe dará qual a porta do localhost(talvez seja necessário rodar o comando npm run start:dev), normalmente sendo http://localhost:3000/
   <br>
   Você pode utilizar estes endpoints com algo como o Postman para testes e deve utiliza-la na configuração do arquivo .env do frontend deste aplicação.
