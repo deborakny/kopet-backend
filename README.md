@@ -1,3 +1,51 @@
+<h1> Instruções</h1>
+<ul>
+<li>
+<h2>Baixar do GitHub</h2>
+<p>
+  É necessário rodar em separado o front e back da aplicação, com preferência do backend primeiramente. Você pode baixar o arquivo zipado pelo github ou usar git pull tal qual na instrução do próprio github para baixar o arquivo.
+</li>
+<li>
+<h2>PostgreSQL e arquivo .env</h2>
+</p>
+  É necessário ter em seu postgreSQL um banco já criado com o mesmo nome que será utilizado aqui. Crie no seu backend um arquivo .env com a seguinte estrutura:
+</p>
+<br>
+<p>
+  DB_HOST: 
+  DB_PORT: 
+  DB_USERNAME: 
+  DB_PASSWORD: 
+  DB_NAME: 
+
+  TWILIO_AUTH_TOKEN: 
+  TWILIO_ACCOUNT_SID: 
+  TWILIO_PHONE_NUMBER: 
+
+  MAILGUN_USERNAME: 
+  MAILGUN_PASSWORD: 
+  FROM_EMAIL: 
+<p>
+<br>
+<p>
+  Preencha os campos conforme seus dados do PostgreSQL, suas informações do Twilio (para sistema de SMS) e Mailgun (para envio de e-mails). Caso não tenha interesse, você pode comentar a função que os inicia (em src/api/agendamento/agendamento.service -> comentar cada chamada a email ou sms ou descomentar) ou a própria função em si em src/api/notificacao/notificacao.service. O envio de SMS está atualmente comentado para propósitos da apresentação deste TCC. É necessário configurar a lista de e-mails permitidos conforme os do seu Mailgun (caso versão gratuita) para que seja realizado o envio sem erros.
+</p>
+</li>
+<li>
+<h2>Comandos do BackEnd / Inicialização</h2>
+<p>
+  Após baixa-lo, use o comando "npm i" no terminal de seu diretório. Ele irá baixar todos os componentes necessários da aplicação. Em seguida, utilize ou o comando "npm run start" ou o "nest start" para rodar a aplicação. Ele irá criar as tabelas necessárias no postgreSQL - a conexão com o Twilio e Mailgun somente é feita ao realizar um agendamento, caso não tenha comentado esse trecho.
+  O próprio terminal lhe dará qual a porta do localhost(talvez seja necessário rodar o comando npm run start:dev), normalmente sendo http://localhost:3000/
+  <br>
+  Você pode utilizar estes endpoints com algo como o Postman para testes e deve utiliza-la na configuração do arquivo .env do frontend deste aplicação.
+</p>
+<br>
+<p>
+  Para verificar as endpoints disponíveis e o que fazem cada uma, pode utilizar a endpoint http://localhost:3000/api.
+</p>
+</li>
+</ul>
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
